@@ -1,0 +1,799 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<title>placely page</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/font-awesome.css">
+		<link rel="stylesheet" href="css/bootstrap-datepicker.css">
+		<link rel="stylesheet" href="css/bootstrap-datetimepicker.css" />
+  		<link href='https://fonts.googleapis.com/css?family=Raleway:400,900italic,900,800italic,800,700italic,700,600,600italic,500italic,500,400italic,100italic,100,200,200italic,300,300italic' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+		</head>
+	<body>
+		<div class="placeli-page">
+			<div class="top-nav">
+				<div class="container">
+					<div class="right pull-right">
+						<ul class="list-inline list-unstyled">
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">USA,dollar
+									<span>(USD/$)</span><i class="fa fa-angle-down"></i></a>
+									<ul class="dropdown-menu">
+										<li><a href="#">Action</a></li>
+										<li><a href="#">Another action</a></li>
+										<li><a href="#">Something else here</a></li>
+										<li><a href="#">Separated link</a></li>
+										<li><a href="#">One more separated link</a></li>
+									</ul>
+								</li>
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">English<i class="fa fa-angle-down"></i></a>
+									<ul class="dropdown-menu">
+										<li><a href="#">Action</a></li>
+										<li><a href="#">Another action</a></li>
+										<li><a href="#">Something else here</a></li>
+										<li><a href="#">Separated link</a></li>
+										<li><a href="#">One more separated link</a></li>
+									</ul>
+								</li>
+								<li class="last-chaild"><i class="fa fa-lock lock"></i><a href="#">Login/Signup</a></li>
+							</ul>
+						</div>
+					</div><!--container-->
+				</div><!--top-nav-->
+				<div class="caruosel-encolser">
+					<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+						<!-- Indicators -->
+						<ol class="carousel-indicators">
+							<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+							<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+							<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+						</ol>
+						<!-- Wrapper for slides -->
+						<div class="carousel-inner" role="listbox">
+							<div class="item active">
+								<div class="bg-img" style="background-image: url('images/bg-placely.png')"></div>
+							</div><!--item-active-->
+							<div class="carousel-caption">
+								<div class="target">top destination</div>
+								<div class="city">san fransisco</div>
+								<div class="incentive">Start from <span>$250/night</span></div>
+								<a href="#" class="btn btn-select">book now</a>
+							</div>
+							<div class="item">
+								<div class="bg-img" style="background-image: url('images/bg-placely2.png')"></div>
+							</div><!--item-->
+							<div class="carousel-caption">
+								<div class="target">top destination</div>
+								<div class="city">san fransisco</div>
+								<div class="incentive">Start from <span>$250/night</span></div>
+								<a href="#" class="btn btn-select">book now</a>
+							</div>
+							<div class="item">
+								<div class="bg-img" style="background-image: url('images/placely-bg4.png')"></div>
+							</div><!--item-->
+							<div class="carousel-caption">
+								<div class="target">top destination</div>
+								<div class="city">san fransisco</div>
+								<div class="incentive">Start from <span>$250/night</span></div>
+								<a href="#" class="btn btn-select">book now</a>
+							</div>
+						</div>
+						<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+							<div class="price-range">
+								<div class="imag1"><img src="images/building.png"></div>
+								<h4>Ubud Bail,Indonesia</h4>
+								<h5>start from $250</h5>
+							</div>
+						</a>
+						<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+							<div class="price-range">
+								<div class="imag2"><img src="images/building.png"></div>
+								<h4>san fransisco,California</h4>
+								<h5>start from $250</h5>
+							</div>
+						</a>
+						<div class="search-box">
+						</div><!--search-box-->
+						  <form class="search-form">
+							<div class="container">
+								<div class="input-group">
+									<input type="text" class="form-control" placeholder="Where do you want to go?">
+									<div class="form-group input-group-addon">
+                						<div class='input-group date' id='datetimepicker1'>
+                						    <span class="input-group-addon calender">
+						                       	<span class="glyphicon glyphicon-calendar"></span>
+						                    </span>
+                    						<input type='text' class="check-in-box" placeholder="check in"/>
+						                </div>
+						            </div>
+						            <div class="form-group input-group-addon">
+                						<div class='input-group date' id='datetimepicker2'>
+                						    <span class="input-group-addon calender">
+						                       	<span class="glyphicon glyphicon-calendar"></span>
+						                    </span>
+                    						<input type='text' class="check-out-box" placeholder="check out" />
+						                </div>
+						            </div>
+									<div class="input-group-btn">
+										<button type="button" class="btn btn-guest dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Guest 
+											<span class="caret"></span></button>
+											<ul class="dropdown-menu dropdown-menu-right">
+												<li><a href="#">Action</a></li>
+												<li><a href="#">Another action</a></li>
+												<li><a href="#">Something else here</a></li>
+												<li><a href="#">Separated link</a></li>
+											</ul>
+									</div><!-- /btn-group -->
+										<span class="input-group-btn">
+											<button class="btn btn-green" type="button">find a place</button>
+										</span>
+									</div><!-- /input-group -->
+								</div>
+							</form>
+							<form class="block-form">
+										<input type="text" class="form-control" placeholder="Where do you want to go?">
+										<span class="block-btn">
+											<button class="btn btn-check-in" type="button"><i class="fa fa-calendar"></i>check in</button>
+										</span>
+										<span class="block-btn">
+											<button class="btn btn-check-out" type="button"><i class="fa fa-calendar"></i> check out</button>
+										</span>
+										<span class="block-btn">
+	                                        <button class="btn form-btn guest-btn" type="button"><span>Guest</span> <span class="caret"></span></button>
+	                                    </span>
+											<span class="block-btn">
+												<button class="btn btn-green" type="button">find a place</button>
+											</span>
+							</form>
+						</div><!--/.caruosel-->
+						<div class="main-nav">
+						</div><!--main-nav-->
+						<div class="top-text">
+							<div class="container">
+								<nav class="navbar navbar-default">
+									<div class="container-fluid">
+										<!-- Brand and toggle get grouped for better mobile display -->
+										<div class="navbar-header">
+											<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+												<span class="sr-only">Toggle navigation</span>
+												<span class="icon-bar"></span>
+												<span class="icon-bar"></span>
+												<span class="icon-bar"></span>
+											</button>
+											<a class="navbar-brand" href="#"><img src="images/placely-logo.png" alt="brand-logo"></a>
+										</div>
+										<!-- Collect the nav links, forms, and other content for toggling -->
+										<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+											<ul class="nav navbar-nav navbar-right">
+												<li><a href="#">Home</a></li>
+												<li><a href="#">About us</a></li>
+												<li><a href="#">Blog</a></li>
+												<li><a href="#">contact us</a></li>
+												<li><a href="#">Help</a></li>
+												<li><a href="#" class="btn btn-green">list your room</a></li>
+											</ul><!--nav-bar-->
+										</div><!-- /.navbar-collapse -->
+									</div><!-- /.container-fluid -->
+								</nav><!--/.nav-bar--> 
+							</div><!--container-->
+						</div><!--/.top-text-->
+					</div>
+					<div class="dark-bg">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-4">
+									<div class="booking"><i class="fa fa-home"></i>NO Booking Fees</div>
+									<div class="para">Ut enim ad minim veniam, quis nosturd exercition ullamco laborisaliquip commodo consequet</div>
+								</div>
+								<div class="col-md-4">
+									<div class="booking"><i class="fa fa-scissors"></i>Lowest price Graranted</div>
+									<div class="para">Ut enim ad minim veniam, quis nosturd exercition ullamco laborisaliquip commodo consequet</div>
+								</div>
+								<div class="col-md-4">
+									<div class="rooms"><i class="fa fa-globe"></i><span>5,387 rooms from all the world</span></div>
+									<div class="para">Ut enim ad minim veniam, quis nosturd exercition ullamco laborisaliquip commodo consequet</div>
+								</div>
+							</div><!--row-->
+						</div><!--/.container-->
+					</div><!--/.dark-bg-->
+					<div class="white-bg">
+						<div class="container">
+							<div class="row">
+								<div class="bg-head">
+									<div class="small-border"></div>
+									<h4 class="popular">Popular Destination</h4>
+									<p>Ut enim ad minim veniam, quis nosturd exercition ullamco laborisaliquip commodo consequet</p>	
+								</div>
+								<div class="col-md-4">
+									<div class="bg-indonesia">
+										<div class="border-author"></div>
+										<img src="images/dubai-tower.png" alt="">
+										<div class="content">
+											<div class="small-bg"></div>
+											<div class="country"><a href="#">jakarta,indonesia</a></div>
+											<div class="room-list"><a href="#">199 rooms listed</a></div>
+										</div>
+									 </div>
+								</div>
+								<div class="col-md-4">
+									<div class="bg-street">
+										<div class="border-author"></div>
+										<img src="images/house-block.png" alt="">
+										<div class="content">
+											<div class="small-bg"></div>
+											<div class="country"><a href="#">jakarta,indonesia</a></div>
+											<div class="room-list"><a href="#">199 rooms listed</a></div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="indonesia-author">
+										<div class="border-author"></div>
+										<img src="images/author.png" alt="">
+										<div class="content">
+											<div class="small-bg"></div>
+											<div class="country"><a href="#">jakarta,indonesia</a></div>
+											<div class="room-list"><a href="#">199 rooms listed</a></div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="indonesia-house">
+										<div class="border-author"></div>
+										<img src="images/indo-street.png" alt="">
+										<div class="content">
+												<div class="small-bg"></div>
+												<div class="country"><a href="#">jakarta,indonesia</a></div>
+												<div class="room-list"><a href="#">199 rooms listed</a></div>
+										</div>
+									</div>
+								</div>
+							</div><!--/.row-->
+							<div class="view-btn text-center">
+									<a href="#" class="btn btn-view">view More</a>
+							</div>
+						</div><!--/.container-->
+					</div><!--/.white-bg-->
+					<div class="placely-deals">
+						<div class="container">
+							<div class="row">
+								<div class="bg-head">
+									<div class="small-border"></div>
+									<h4 class="popular">Last Minute Deals</h4>
+									<p>Ut enim ad minim veniam, quis nosturd exercition ullamco laborisaliquip commodo consequet</p>	
+								</div>
+								<div class="col-md-3">
+									<div class="item-holder">
+										<div class="item-img">
+											<a href="#"><img src="images/placely-room.png" alt="">
+											<div class="gradient"></div>
+											</a>
+											<div class="cone"></div>
+											<div class="cone-text">
+												30% disc
+											</div>
+										</div>
+										<div class="placely-details">
+											<h4 class="dollor">$75 <span>per night</span></h4>
+											<h5 class="place"><a href="">Hotel Hilton and Resorts</a></h5>
+											<p class="address"><i class="fa fa-map-marker"></i><a href="">Bastille, paris france</a></p>
+										</div>
+										<div class="author-rating">
+											<a href=""><img src="images/author-new.png" alt=""></a>
+											<ul class="list-inline list-unstyled stars">
+												<li><a href="#"><i class="fa fa-star"></i></a></li>
+												<li><a href="#"><i class="fa fa-star"></i></a></li>
+												<li><a href="#"><i class="fa fa-star"></i></a></li>
+												<li><a href="#"><i class="fa fa-star"></i></a></li>
+												<li><a href="#"><i class="fa fa-star"></i></a></li>
+											</ul>
+										</div>
+									</div><!--item-holder-->
+								</div><!--col-md-3-->
+								<div class="col-md-3">
+									<div class="item-holder">
+										<div class="item-img">
+											<a href="#"><img src="images/placely-room.png" alt="">
+											<div class="gradient"></div>
+											</a>
+											<div class="cone"></div>
+											<div class="cone-text">
+												30% disc
+											</div>
+										</div>
+										<div class="placely-details">
+											<h4 class="dollor">$75 <span>per night</span></h4>
+											<h5 class="place"><a href="">Hotel Hilton and Resorts</a></h5>
+											<p class="address"><i class="fa fa-map-marker"></i> <a href="">Bastille, paris france</a>
+											</p>
+										</div>
+										<div class="author-rating">
+											<a href=""><img src="images/author-new.png" alt=""></a>
+											<ul class="list-inline list-unstyled stars">
+												<li><a href="#"><i class="fa fa-star"></i></a></li>
+												<li><a href="#"><i class="fa fa-star"></i></a></li>
+												<li><a href="#"><i class="fa fa-star"></i></a></li>
+												<li><a href="#"><i class="fa fa-star"></i></a></li>
+												<li><a href="#"><i class="fa fa-star"></i></a></li>
+											</ul>
+										</div>
+									</div><!--item-holder-->
+								</div><!--col-md-3-->
+								<div class="col-md-3">
+									<div class="item-holder">
+										<div class="item-img">
+											<a href="#"><img src="images/placely-room.png" alt="">
+											<div class="gradient"></div>
+											</a>
+											<div class="cone"></div>
+											<div class="cone-text">
+												30% disc
+											</div>
+										</div>
+										<div class="placely-details">
+											<h4 class="dollor">$75 <span>per night</span></h4>
+											<h5 class="place"><a href="#">Hotel Hilton and Resorts</a></h5>
+											<p class="address"><i class="fa fa-map-marker"></i><a href="#">Bastille, paris france</a>
+											</p>
+										</div>
+										<div class="author-rating">
+											<a href=""><img src="images/author-new.png" alt=""></a>
+											<ul class="list-inline list-unstyled stars">
+												<li><a href="#"><i class="fa fa-star"></i></a></li>
+												<li><a href="#"><i class="fa fa-star"></i></a></li>
+												<li><a href="#"><i class="fa fa-star"></i></a></li>
+												<li><a href="#"><i class="fa fa-star"></i></a></li>
+												<li><a href="#"><i class="fa fa-star"></i></a></li>
+											</ul>
+										</div>
+									</div><!--item-holder-->
+								</div><!--col-md-3-->
+								<div class="col-md-3">
+									<div class="item-holder">
+										<div class="item-img">
+											<a href="#"><img src="images/placely-room.png" alt="">
+											<div class="gradient"></div>
+											</a>
+											<div class="cone"></div>
+											<div class="cone-text">
+												30% disc
+											</div>
+										</div>
+										<div class="placely-details">
+											<h4 class="dollor">$75 <span>per night</span></h4>
+											<h5 class="place"><a href="">Hotel Hilton and Resorts</h5></a>
+											<p class="address"><i class="fa fa-map-marker"></i><a href="">Bastille, paris france</a></p>
+										</div>
+										<div class="author-rating">
+											<a href="#"><img src="images/author-new.png" alt=""></a>
+											<ul class="list-inline list-unstyled stars">
+												<li><a href="#"><i class="fa fa-star"></i></a></li>
+												<li><a href="#"><i class="fa fa-star"></i></a></li>
+												<li><a href="#"><i class="fa fa-star"></i></a></li>
+												<li><a href="#"><i class="fa fa-star"></i></a></li>
+												<li><a href="#"><i class="fa fa-star"></i></a></li>
+											</ul>
+										</div>
+									</div><!--item-holder-->
+								</div><!--col-md-3-->
+							</div><!--row-->
+						</div><!--container--> 
+					</div><!--placely-deals-->
+					<div class="author-quaries">
+						<div class="author-bg">
+						</div>
+						<div class="author-text">
+							<div class="content">
+								<div class="container">
+									<div class="host">Become an host</div>
+									<div class="row">
+										<div class="col-md-7 col-md-push-3">
+											<div class="question">want to earn money from your home ?</div>
+										</div>
+									</div>
+									<div class="list-btn">
+										<a href="#" class="btn btn-select">List your room</a>
+									</div>
+								</div>
+							</div><!--container-->
+						</div><!--author-text-->
+					</div><!--author-quaries-->
+					<div class="hotel-paris">
+						<div class="container">
+		 					<div class="row">
+		 						<div class="bg-head">
+									<div class="small-border"></div>
+									<h4 class="popular">Near you</h4>
+									<p>Ut enim ad minim veniam, quis nosturd exercition ullamco laborisaliquip commodo consequet</p>	
+								</div>
+								<div class="col-md-3">
+									<div class="item-holder">
+										<div class="item-img">
+											<a href="#"><img src="images/placely-room.png" alt="">
+											<div class="gradient"></div>
+											</a>
+										</div>
+										<div class="placely-details">
+											<h4 class="dollor">$75 <span>per night</span></h4>
+											<h5 class="place"><a href="#">Hotel Hilton and Resorts</h5></a>
+											<p class="address"><i class="fa fa-map-marker"></i><a href="">Bastille, paris france</p></a>
+										</div>
+										<div class="author-rating">
+											<a href="#"><img src="images/author-new.png" alt=""></a>
+										</div>
+									</div><!--item-holder-->
+								</div><!--col-md-3-->
+								<div class="col-md-3">
+									<div class="item-holder">
+										<div class="item-img">
+											<a href="#"><img src="images/placely-room.png" alt="">
+											<div class="gradient"></div>
+											</a>
+										</div>
+										<div class="placely-details">
+											<h4 class="dollor">$75 <span>per night</span></h4>
+											<h5 class="place"><a href="#">Hotel Hilton and Resorts</h5></a>
+											<p class="address"><i class="fa fa-map-marker"></i><a href="#">Bastille, paris france</a>
+											</p>
+										</div>
+										<div class="author-rating">
+											<a href="#"><img src="images/author-new.png" alt=""></a>
+										</div>
+									</div><!--item-holder-->
+								</div><!--col-md-3-->
+								<div class="col-md-3">
+									<div class="item-holder">
+										<div class="item-img">
+											<a href="#"><img src="images/placely-room.png" alt="">
+											<div class="gradient"></div>
+											</a>
+										</div>
+										<div class="placely-details">
+											<h4 class="dollor">$75 <span>per night</span></h4>
+											<h5 class="place"><a href="#">Hotel Hilton and Resorts</h5></a>
+											<p class="address"><i class="fa fa-map-marker"></i><a href="#">Bastille, paris france</a>
+											</p>
+										</div>
+										<div class="author-rating">
+											<a href="#"><img src="images/author-new.png" alt=""></a>
+											<ul class="list-inline list-unstyled stars">
+												<li><a href="#"><i class="fa fa-star"></i></a></li>
+												<li><a href="#"><i class="fa fa-star"></i></a></li>
+												<li><a href="#"><i class="fa fa-star"></i></a></li>
+												<li><a href="#"><i class="fa fa-star"></i></a></li>
+												<li><a href="#"><i class="fa fa-star"></i></a></li>
+											</ul>
+										</div>
+									</div><!--item-holder-->
+								</div><!--col-md-3-->
+								<div class="col-md-3">
+									<div class="item-holder">
+										<div class="item-img">
+											<a href="#"><img src="images/placely-room.png" alt="">
+											<div class="gradient"></div>
+											</a>
+										</div>
+										<div class="placely-details">
+											<h4 class="dollor">$75 <span>per night</span></h4>
+											<h5 class="place"><a href="#">Hotel Hilton and Resorts</h5></a>
+											<p class="address"><i class="fa fa-map-marker"></i><a href="#">Bastille, paris france</a>
+											</p>
+										</div>
+										<div class="author-rating">
+											<a href="#"><img src="images/author-new.png" alt=""></a>
+											<ul class="list-inline list-unstyled stars">
+												<li><a href="#"><i class="fa fa-star"></i></a></li>
+												<li><a href="#"><i class="fa fa-star"></i></a></li>
+												<li><a href="#"><i class="fa fa-star"></i></a></li>
+												<li><a href="#"><i class="fa fa-star"></i></a></li>
+												<li><a href="#"><i class="fa fa-star"></i></a></li>
+											</ul>
+										</div>
+									</div><!--item-holder-->
+								</div><!--col-md-3-->
+								<div class="col-md-3">
+									<div class="item-holder">
+										<div class="item-img">
+											<a href="#"><img src="images/placely-room.png" alt="">
+											<div class="gradient"></div>
+											</a>
+										</div>
+										<div class="placely-details">
+											<h4 class="dollor">$75 <span>per night</span></h4>
+											<h5 class="place"><a href="#">Hotel Hilton and Resorts</a></h5>
+											<p class="address"><i class="fa fa-map-marker"></i><a href="#">Bastille, paris france</a>
+											</p>
+										</div>
+										<div class="author-rating">
+											<a href="#"><img src="images/author-new.png" alt=""></a>
+										</div>
+									</div><!--item-holder-->
+								</div><!--col-md-3-->
+								<div class="col-md-3">
+									<div class="item-holder">
+										<div class="item-img">
+											<a href="#"><img src="images/placely-room.png" alt="">
+											<div class="gradient"></div>
+											</a>
+										</div>
+										<div class="placely-details">
+											<h4 class="dollor">$75 <span>per night</span></h4>
+											<h5 class="place"><a href="#">Hotel Hilton and Resorts</h5></a>
+											<p class="address"><i class="fa fa-map-marker"></i><a href="">Bastille, paris france</a></p>
+										</div>
+										<div class="author-rating">
+											<a href="#"><img src="images/author-new.png" alt=""></a>
+										</div>
+									</div><!--item-holder-->
+								</div><!--col-md-3-->
+								<div class="col-md-3">
+									<div class="item-holder">
+										<div class="item-img">
+											<a href="#"><img src="images/placely-room.png" alt="">
+											<div class="gradient"></div>
+											</a>
+										</div>
+										<div class="placely-details">
+											<h4 class="dollor">$75 <span>per night</span></h4>
+											<h5 class="place"><a href="">Hotel Hilton and Resorts</h5></a>
+											<p class="address"><i class="fa fa-map-marker"></i><a href="">Bastille, paris france</a></p>
+										</div>
+										<div class="author-rating">
+											<a href="#"><img src="images/author-new.png" alt=""></a>
+											<ul class="list-inline list-unstyled stars">
+												<li><a href="#"><i class="fa fa-star"></i></a></li>
+												<li><a href="#"><i class="fa fa-star"></i></a></li>
+												<li><a href="#"><i class="fa fa-star"></i></a></li>
+												<li><a href="#"><i class="fa fa-star"></i></a></li>
+												<li><a href="#"><i class="fa fa-star"></i></a></li>
+											</ul>
+										</div>
+									</div><!--item-holder-->
+								</div><!--col-md-3-->
+								<div class="col-md-3">
+									<div class="item-holder">
+										<div class="item-img">
+											<a href="#"><img src="images/placely-room.png" alt="">
+											<div class="gradient"></div>
+											</a>
+										</div>
+										<div class="placely-details">
+											<h4 class="dollor">$75 <span>per night</span></h4>
+											<h5 class="place"><a href="#">Hotel Hilton and Resorts</h5></a>
+											<p class="address"><i class="fa fa-map-marker"></i><a href="#">Bastille, paris france</a>
+											</p>
+										</div>
+										<div class="author-rating">
+											<a href="#"><img src="images/author-new.png" alt=""></a> 
+											<ul class="list-inline list-unstyled stars">
+												<li><a href="#"><i class="fa fa-star"></i></a></li>
+												<li><a href="#"><i class="fa fa-star"></i></a></li>
+												<li><a href="#"><i class="fa fa-star"></i></a></li>
+												<li><a href="#"><i class="fa fa-star"></i></a></li>
+												<li><a href="#"><i class="fa fa-star"></i></a></li>
+											</ul>
+										</div>
+									</div><!--item-holder-->
+								</div><!--col-md-3-->
+		 					</div><!--row-->
+		 					<div class="btn-hotel text-center">
+								<a href="#" class="btn btn-paris">view more</a>
+						   </div>
+						</div><!--container-->
+					</div><!--hotel-paries-->
+					<div class="about-section">
+						<div class="about-bg">
+							<img src="images/about-img.png" alt="">
+						</div>
+						<div class="about-text">
+							<div class="about-content">
+								<div class="container">
+								   <div class="placely-story"><a href="#">watch our story</a></div>
+									<ul class="list-inline list-unstyled">
+										<li>want to know</li>
+										<li class="play-icon">
+											<a href="#">
+												<div class="circle-icon">
+													<img src="images/video-triangle.png" alt="">
+												</div>
+											</a>
+										</li>
+										<li>about placely</li>
+									</ul>
+								</div>
+							</div><!--about-content-->
+						</div><!--about-text-->
+					</div><!--about-section-->
+					<div class="placely-blog">
+						<div class="container">
+							<div class="row">
+								<div class="bg-head">
+									<div class="small-border"></div>
+									<h4 class="popular">Latest Blog</h4>
+									<p>Ut enim ad minim veniam, quis nosturd exercition ullamco laborisaliquip commodo consequet</p>	
+								</div>
+								<div class="col-md-3 col-sm-6">
+									<div class="traveling-world">
+										<div class="travel-img">
+											<img src="images/admin.png" alt="">
+										</div>
+										<div class="travel-gradient"></div>
+										<div class="travelling-text">Travelling</div>
+										<div class="blog-user-details">
+											<p>Raw denim typewriter Carles irony.</p>
+											<h4>March 11/By<span>Admin</span></h4>
+										</div>
+										<div class="blog-content">
+                                               Lorem Ipsum has been the industry's standard dummy...
+                                        </div>
+									</div>
+								</div><!--col-md-3-->
+								<div class="col-md-3 col-sm-6">
+									<div class="traveling-world">
+										<div class="travel-img">
+											<img src="images/travelling-world.png" alt="">
+										</div>
+										<div class="travel-gradient"></div>
+										<div class="travelling-text">Travelling</div>
+										<div class="blog-user-details">
+											<p>Raw denim typewriter Carles irony.</p>
+											<h4>March 11/By<span>Admin</span></h4>
+										</div>
+										<div class="blog-content">
+                                               Lorem Ipsum has been the industry's standard dummy...
+                                        </div>
+									</div>
+								</div><!--col-md-3-->
+								<div class="col-md-3 col-sm-6">
+									<div class="traveling-world">
+										<div class="travel-img">
+											<img src="images/travelling-world2.png" alt="">
+										</div>
+										<div class="travel-gradient"></div>
+										<div class="travelling-text">Travelling</div>
+										<div class="blog-user-details">
+											<p>Raw denim typewriter Carles irony.</p>
+											<h4>March 11/By<span>Admin</span></h4>
+										</div>
+										<div class="blog-content">
+                                               Lorem Ipsum has been the industry's standard dummy...
+                                        </div>
+									</div>
+								</div><!--col-md-3-->
+								<div class="col-md-3 col-sm-6">
+									<div class="traveling-world">
+										<div class="travel-img">
+											<img src="images/travelling-world3.png" alt="">
+										</div>
+										<div class="travel-gradient"></div>
+										<div class="travelling-text">Travelling</div>
+										<div class="blog-user-details">
+											<p>Raw denim typewriter Carles irony.</p>
+											<h4>March 11/By<span>Admin</span></h4>
+										</div>
+										<div class="blog-content">
+                                               Lorem Ipsum has been the industry's standard dummy...
+                                        </div>
+									</div>
+								</div><!--col-md-3-->
+							</div><!--row-->
+						</div><!--container-->
+					</div><!--placely-blog-->
+					<div class="Travel-discount">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="travel-compensation">
+										<div class="envelope-icon"><i class="fa fa-envelope-o"></i></div>
+										<div class="travel-deals">Travel Deals - up to 50% off</div>
+										<div class="travel-signup">Sign up and get exclusive travel deals stright to your inbox!</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="input-group">
+								      <input type="text" class="form-control" placeholder="">
+								      <span class="input-group-btn">
+								        <button class="btn btn-signup" type="button">sign up</button>
+								      </span>
+    								</div><!-- /input-group -->
+								</div>
+							</div>
+						</div>
+					</div><!--travel-discount-->
+					 <div class="footer">
+					 	<div class="container">
+					 	  <div class="row">	
+					 		<div class="col-md-3">
+					 			<div class="about">about us</div>
+					 			<div class="placely"><i class="fa fa-paper-plane"></i>placely</div>
+					 			<div class="about-text"><p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.</p></div>
+					 			<ul class="list-inline list-unstyled">
+					 				<li><a href="#"><img src="images/amex.jpg" alt=""></a></li>
+					 				<li><a href="#"><img src="images/discover.jpg" alt=""></a></li>
+					 				<li><a href="#"><img src="images/visa.jpg" alt=""></a></li>
+					 				<li><a href="#"><img src="images/mc.jpg" alt=""></a></li>
+					 				<li><a href="#"><img src="images/flat.jpg" alt=""></a></li>
+					 			</ul>
+					 		</div>
+					 		<div class="col-md-3">
+					 			<div class="placely-info">
+					 				Resource Links
+					 			</div>
+					 			<ul class="list-unstyled placely-info-link">
+					 				<li><a href="#">About us</a></li>
+					 				<li><a href="#">Customer support</a></li>
+					 				<li><a href="#">contact us</a></li>
+					 				<li><a href="#">Redeem invite code</a></li>
+					 				<li><a href="#">carrers</a></li>
+					 				<li><a href="#">Logos & images</a></li>
+					 				<li><a href="#">Terms and conditions</a></li>
+					 				<li><a href="#">Privacy and cookie policy</a></li>
+					 				<li><a href="#">copy right information</a></li>
+					 				<li><a href="#">Give us feedback</a></li>
+					 			</ul>
+					 		</div><!--col-md-3-->
+					 		<div class="col-md-3">
+					 		    <div class="tags">Tags</div>
+					 		    <ul class="list-inline list-unstyled placely-tags">
+					 		    	<li><a href="#">featured image</a></li>
+					 		    	<li><a href="#">Design</a></li>
+					 		    	<li><a href="#">shop</a></li>
+					 		    	<li><a href="#">woocommerce page</a></li>
+					 		    </ul> 
+					 			<div class="connect">social media</div>
+					 			<ul class=" list-inline list-unstyled social-icon">
+					 				<li><a href="#" class="fb-icon"><i class="fa fa-facebook"></i></a></li>
+					 				<li><a href="#" class="twitter-icon"><i class="fa fa-twitter"></i></a></li>
+					 				<li><a href="#" class="google-icon"><i class="fa fa-google-plus"></i></a></li>
+					 				<li><a href="#" class="flickar-icon"><i class="fa fa-flickr"></i></a></li>
+					 				<li><a href="#" class="youtube-icon"><i class="fa fa-youtube"></i></a></li>        
+					 			</ul>
+					 		</div><!--col-md-3-->
+					 		<div class="col-md-3">
+					 		    <div class="world-map">
+					 		    	<img src="images/world-map.png" alt="">
+					 		    </div>
+					 			<div class="contact">contact info</div>
+					 			<div class="Address">Address:
+					 				<p>Envato Studio no 34,victry melbourne,Australia</p>
+					 			</div>
+					 			<div class="phn">Phone:
+					 				<p>+01 5481 3321 3</p>
+					 			</div>
+					 			<div class="Email">Email:
+					 				<p>contact@yourwebsite.com</p>
+					 			</div>
+					 		</div><!--col-md-3-->
+					 	</div>
+					 	</div><!--container-->
+					 </div><!--footer-->
+					 <div class="copy-right">
+					 	<div class="container">
+					 		<div class="copy pull-left">
+					 		   <i class="fa fa-copyright"></i>copyright 2014 Placely
+					 		</div>
+					 		<div class="bootstrap pull-right">
+					 			Created with <i class="fa fa-heart"></i>by <span>Bootstrap Guru</span>
+					 		</div>
+					 	</div><!--container-->
+					 </div><!--copy-right-->
+				</div><!--/.placeli-page-->
+				<!-- jQuery -->
+				<script src="js/bootstrap.min.js"></script>
+				<script src="js/jquery.min.js"></script>
+				<!-- Bootstrap JavaScript -->
+				<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+				<script src="js/moment.js"></script>
+				<script src="js/bootstrap.js"></script>
+				<script src="js/bootstrap-datepicker.js"></script>
+				<script src="js/bootstrap-datetimepicker.js"></script>
+				 <script type="text/javascript">
+            		$(function () {
+                		$('#datetimepicker1').datepicker();
+                		$('#datetimepicker2').datepicker();
+            		});
+        		 </script>
+			</body>
+			</html>

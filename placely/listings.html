@@ -1,0 +1,1743 @@
+<!DOCTYPE html>
+<html lang="Eng">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Placely Maps</title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/stylemaps.css">
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<link rel="stylesheet" href="css/bootstrap-datepicker.css">
+	<link rel="stylesheet" href="css/bootstrap-datetimepicker.css" />
+	<link href='https://fonts.googleapis.com/css?family=Raleway:400,900italic,900,800italic,800,700italic,700,600,600italic,500italic,500,400italic,100italic,100,200,200italic,300,300italic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<div class="placely-map">
+		<div class="map-block">
+			<div class="maps-bg">
+				<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+				<div style='overflow:hidden;height:800px;width:100%;'>
+					<div id='gmap_canvas' style='height:800px;width:100%;'></div>
+					<div><small><a href="http://embedgooglemaps.com">									embed google maps							</a></small></div><div><small><a href="http://www.autohuren.world/">auto huren</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:10,center:new google.maps.LatLng(51.5073509,-0.12775829999998223),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(51.5073509,-0.12775829999998223)});infowindow = new google.maps.InfoWindow({content:'<strong>Title</strong><br>London, United Kingdom<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+				</div>
+			</div>
+			<div class="black-bg"></div>
+			<div class="dark-bg">
+			</div><!--dark-bg-->
+			<div class="top-head">
+				<div class="container">
+					<div class="top-nav">
+						<div class="left pull-left">
+							<ul class="list-inline list-unstyled">
+								<li class="dropdown">
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">USA,dollar
+										<span>(USD/$)</span><i class="fa fa-angle-down"></i></a>
+										<ul class="dropdown-menu">
+											<li><a href="#">Action</a></li>
+											<li><a href="#">Another action</a></li>
+											<li><a href="#">Something else here</a></li>
+											<li><a href="#">Separated link</a></li>
+											<li><a href="#">One more separated link</a></li>
+										</ul>
+									</li>
+									<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">English<i class="fa fa-angle-down"></i></a>
+										<ul class="dropdown-menu">
+											<li><a href="#">Action</a></li>
+											<li><a href="#">Another action</a></li>
+											<li><a href="#">Something else here</a></li>
+											<li><a href="#">Separated link</a></li>
+											<li><a href="#">One more separated link</a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+							<div class="Login-btn pull-right">
+								<i class="fa fa-lock lock"></i><a href="#">Login/Signup</a>
+							</div>
+						</div><!--container-->
+					</div><!--top-nav-->
+				</div><!--top-head-->
+				<div class="main-nav">
+					<div class="container">
+						<nav class="navbar navbar-default">
+							<div class="container-fluid">
+								<!-- Brand and toggle get grouped for better mobile display -->
+								<div class="navbar-header">
+									<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+										<span class="sr-only">Toggle navigation</span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+									</button>
+									<a class="navbar-brand" href="#"><img src="images/kuta-logo.png" alt="brand-logo"></a>
+								</div>
+								<!-- Collect the nav links, forms, and other content for toggling -->
+								<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+									<ul class="nav navbar-nav navbar-right">
+										<li><a href="#">Home</a></li>
+										<li><a href="#">About us</a></li>
+										<li><a href="#">Blog</a></li>
+										<li><a href="#">contact us</a></li>
+										<li><a href="#">Help</a></li>
+										<li><a href="#" class="btn btn-green">list your room</a></li>
+									</ul><!--nav-bar-->
+								</div><!-- /.navbar-collapse -->
+							</div><!-- /.container-fluid -->
+						</nav><!--/.nav-bar--> 
+					</div><!--container-->
+				</div><!--/.main-nav-->
+				<form class="search-form">
+					<div class="container">
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="kuta,denpasar,indonesia">
+							<div class="form-group input-group-addon">
+								<div class='input-group date' id='datetimepicker1'>
+									<span class="input-group-addon calender">
+										<span class="glyphicon glyphicon-calendar"></span>
+									</span>
+									<input type='text' class="check-in-box" placeholder="check in"/>
+								</div>
+							</div>
+							<div class="form-group input-group-addon">
+								<div class='input-group date' id='datetimepicker2'>
+									<span class="input-group-addon calender">
+										<span class="glyphicon glyphicon-calendar"></span>
+									</span>
+									<input type='text' class="check-out-box" placeholder="check out" />
+								</div>
+							</div>
+							<div class="input-group-btn">
+								<button type="button" class="btn btn-guest dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Guest 
+									<span class="caret"></span></button>
+									<ul class="dropdown-menu dropdown-menu-right">
+										<li><a href="#">Action</a></li>
+										<li><a href="#">Another action</a></li>
+										<li><a href="#">Something else here</a></li>
+										<li><a href="#">Separated link</a></li>
+									</ul>
+								</div><!-- /btn-group -->
+								<span class="input-group-btn">
+									<button class="btn btn-green" type="button">find a place</button>
+								</span>
+							</div><!-- /input-group -->
+						</div>
+					</form>
+					<form class="block-form">
+						<input type="text" class="form-control" placeholder="kuta,denpasar,indonesia">
+						<span class="block-btn">
+							<button class="btn btn-check-in" type="button"><i class="fa fa-calendar"></i>check in</button>
+						</span>
+						<span class="block-btn">
+							<button class="btn btn-check-out" type="button"><i class="fa fa-calendar"></i> check out</button>
+						</span>
+						<span class="block-btn">
+							<button type="button" class="btn guest-btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Guest 
+									<span class="caret"></span></button>
+							<!-- <ul class="dropdown-menu">
+								<li><a href="#">Action</a></li>
+								<li><a href="#">Another action</a></li>
+								<li><a href="#">Something else here</a></li>
+								<li><a href="#">Separated link</a></li>
+							</ul> -->
+						</span>
+						<span class="block-btn">
+							<button class="btn btn-green" type="button">find a place</button>
+						</span>
+					</form>
+				</div><!--/.placely-map-->
+				<div class="placely-resorts">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-3">
+								<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+									<div class="panel panel-default">
+										<div class="panel-heading" role="tab" id="headingOne">
+											<h4 class="panel-title">
+												<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+													Price range
+													<span class="files pull-right"><i class="fa fa-angle-down"></i></span>
+													<!-- <span class="active-cheveron pull-right"><i class="fa fa-chevron-down"></i></span>
+													<span class="normal-cheveron pull-right"><i class="fa fa-chevron-up"></i></span> -->
+												</a>
+											</h4>
+										</div>
+										<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+											<div class="panel-body">
+												<div class="price">        
+													<b>€ 10</b> <input id="ex2" type="text" class="text-box" value =""  data-slider-min="10" data-slider-max="1000" data-slider-step="5" data-slider-value="[250,450]"/> <b>€ 1000</b>
+												</div>	
+											</div>
+										</div>
+									</div>
+									<div class="panel panel-default">
+										<div class="panel-heading" role="tab" id="headingTwo">
+											<h4 class="panel-title">
+												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+													Room Type
+													<span class="files pull-right"><i class="fa fa-angle-down"></i></span>
+												</a>
+											</h4>
+										</div>
+										<div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+											<div class="panel-body">
+												<div class="panel-list">	
+													<div class="checkbox1">
+														<label class="check-area"><input type="checkbox" class="check-symbol" value="">Entire Place</label>
+													</div>
+													<div class="checkbox">
+														<label class="check-area"><input type="checkbox" class="check-symbol" value="">Private Room</label>
+													</div>
+													<div class="checkbox">
+														<label class="check-area"><input type="checkbox" class="check-symbol" value="">Shared Room</label>
+													</div>
+												</div>	
+											</div>
+										</div>
+									</div>
+									<div class="panel panel-default">
+										<div class="panel-heading" role="tab" id="headingThree">
+											<h4 class="panel-title">
+												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+													Amenities
+													<span class="files pull-right"><i class="fa fa-angle-down"></i></span>
+												</a>
+											</h4>
+										</div>
+										<div id="collapseThree" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
+											<div class="panel-body">
+												<div class="panel-list">
+													<div class="checkbox1">
+														<label class="check-area"><input type="checkbox" class="check-symbol" value="">Bathroom</label>
+													</div>
+													<div class="checkbox">
+														<label class="check-area"><input type="checkbox" class="check-symbol" value="">Cable Tv</label>
+													</div>
+													<div class="checkbox">
+														<label class="check-area"><input type="checkbox" class="check-symbol" value="">Swimming Pool</label>
+													</div>	
+													<div class="checkbox">
+														<label class="check-area"><input type="checkbox" class="check-symbol" value="">Air Conditioner</label>
+													</div>
+													<div class="checkbox">
+														<label class="check-area"><input type="checkbox" class="check-symbol" value="">Pets Allowed</label>
+													</div>
+													<div class="checkbox">
+														<label class="check-area"><input type="checkbox" class="check-symbol" value="">Gym</label>
+													</div>
+													<div class="checkbox">
+														<label class="check-area"><input type="checkbox" class="check-symbol" value="">Wireless Internet</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="panel panel-default">
+										<div class="panel-heading" role="tab" id="headingFour">
+											<h4 class="panel-title">
+												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+													Property Type
+													<span class="files pull-right"><i class="fa fa-angle-down"></i></span>
+												</a>
+											</h4>
+										</div>
+										<div id="collapseFour" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFour">
+											<div class="panel-body">
+												<div class="panel-list">
+													<div class="checkbox1">
+														<label class="check-area"><input type="checkbox" class="check-symbol" value="">Apartment</label>
+													</div>
+													<div class="checkbox">
+														<label class="check-area"><input type="checkbox" class="check-symbol" value="">House</label>
+													</div>
+													<div class="checkbox">
+														<label class="check-area"><input type="checkbox" class="check-symbol" value="">Bed& Breakfast</label>
+													</div>	
+													<div class="checkbox">
+														<label class="check-area"><input type="checkbox" class="check-symbol" value="">Boat</label>
+													</div>
+													<div class="checkbox">
+														<label class="check-area"><input type="checkbox" class="check-symbol" value="">Castle</label>
+													</div>
+													<div class="checkbox">
+														<label class="check-area"><input type="checkbox" class="check-symbol" value="">Cabin</label>
+													</div>
+													<div class="checkbox">
+														<label class="check-area"><input type="checkbox" class="check-symbol" value="">Island</label>
+													</div>
+													<div class="checkbox">
+														<label class="check-area"><input type="checkbox" class="check-symbol" value="">Tent</label>
+													</div>
+													<div class="checkbox">
+														<label class="check-area"><input type="checkbox" class="check-symbol" value="">Tree House</label>
+													</div>
+													<div class="checkbox">
+														<label class="check-area"><input type="checkbox" class="check-symbol" value="">Dorm</label>
+													</div>
+													<div class="checkbox">
+														<label class="check-area"><input type="checkbox" class="check-symbol" value="">Villa</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="panel panel-default">
+										<div class="panel-heading" role="tab" id="headingFive">
+											<h4 class="panel-title">
+												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+													Host Language
+													<span class="files pull-right"><i class="fa fa-angle-down"></i></span>
+												</a>
+											</h4>
+										</div>
+										<div id="collapseFive" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFive">
+											<div class="panel-body">
+												<div class="panel-list">
+													<div class="checkbox1">
+														<label class="check-area"><input type="checkbox" class="check-symbol" value="">English</label>
+													</div>
+													<div class="checkbox">
+														<label class="check-area"><input type="checkbox" class="check-symbol" value="">Espanol</label>
+													</div>
+													<div class="checkbox">
+														<label class="check-area"><input type="checkbox" class="check-symbol" value="">Francais</label>
+													</div>	
+													<div class="checkbox">
+														<label class="check-area"><input type="checkbox" class="check-symbol" value="">Bahasa Indonesia</label>
+													</div>
+													<div class="checkbox">
+														<label class="check-area"><input type="checkbox" class="check-symbol" value="">Deutsch</label>
+													</div>
+													<div class="checkbox">
+														<label class="check-area"><input type="checkbox" class="check-symbol" value="">Hindi</label>
+													</div>
+													<div class="checkbox">
+														<label class="check-area"><input type="checkbox" class="check-symbol" value="">Bengali</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="panel panel-default">
+										<div class="panel-heading" role="tab" id="headingSix">
+											<h4 class="panel-title">
+												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseFive">
+													Size
+													<span class="files pull-right"><i class="fa fa-angle-down"></i></span>
+												</a>
+											</h4>
+										</div>
+										<div id="collapseSix" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingSix">
+											<div class="panel-body">
+												<div class="panel-size">
+													<ul class="list-unstyled">
+														<li>
+															<a href="#">
+																Bedrooms
+																<span class="files pull-right"><img src="images/cheveron-down.png" alt=""></span>
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																Bathrooms
+																<span class="files pull-right"><img src="images/cheveron-down.png" alt=""></span>
+															</a>
+														</li>
+														<li>
+															<a href="#">
+																Beds
+																<span class="files pull-right"><img src="images/cheveron-down.png" alt=""></span>
+															</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="panel panel-default">
+										<div class="panel-heading" role="tab" id="headingSeven">
+											<h4 class="panel-title">
+												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+													Neighborhood
+													<span class="files pull-right"><i class="fa fa-angle-down"></i></span>
+												</a>
+											</h4>
+										</div>
+										<div id="collapseSeven" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingSeven">
+											<div class="panel-body">
+												<div class="panel-list">
+													<div class="checkbox1">
+														<label class="check-area"><input type="checkbox" class="check-symbol" value="">Kuta</label>
+													</div>
+													<div class="checkbox">
+														<label class="check-area"><input type="checkbox" class="check-symbol" value="">Tabanan</label>
+													</div>
+													<div class="checkbox">
+														<label class="check-area"><input type="checkbox" class="check-symbol" value="">Seminyak</label>
+													</div>	
+													<div class="checkbox">
+														<label class="check-area"><input type="checkbox" class="check-symbol" value="">Jimbaran</label>
+													</div>
+													<div class="checkbox">
+														<label class="check-area"><input type="checkbox" class="check-symbol" value="">Ubud</label>
+													</div>
+													<div class="checkbox">
+														<label class="check-area"><input type="checkbox" class="check-symbol" value="">Uluwalu</label>
+													</div>
+													<div class="checkbox">
+														<label class="check-area"><input type="checkbox" class="check-symbol" value="">Nusadua</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="panel panel-default">
+										<div class="panel-heading" role="tab" id="headingEight">
+											<h4 class="panel-title">
+												<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEight" aria-expanded="false" aria-controls="collapseFive">
+													Keyword
+													<span class="files pull-right"><i class="fa fa-angle-down"></i></span>
+												</a>
+											</h4>
+										</div>
+										<div id="collapseEight" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingEight">
+											<div class="panel-body">
+												<div class="input-group">
+													<input type="text" class="form-control" placeholder="Travelling">
+													<span class="input-group-btn">
+														<button class="btn btn-search" type="button"><i class="fa fa-search"></i></button>
+													</span>
+												</div><!-- /input-group -->
+											</div>
+										</div>
+									</div>
+								</div><!--acordian-->
+							</div><!--col-md-3-->
+							<div class="col-md-9 placel-room-list">
+								<div class="placely-rooms pull-left">we found <span>200 Rooms</span> with avilability in <span>Kuta/Tuban</span></div>
+								<div class="sort-price pull-right">
+									<ul class="list-inline list-unstyled hotel-sort">
+										<li><a href="#"><i class="fa fa-th-large"></i></a></li>
+										<li><a href="#"><i class="fa fa-bars"></i></a></li>
+										<li class="dropdown">
+											<button class="btn btn-sort dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+												SORT BY PRICE
+												<span class="caret"></span>
+											</button>
+											<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+												<li><a href="#">Action</a></li>
+												<li><a href="#">Another action</a></li>
+												<li><a href="#">Something else here</a></li>
+												<li><a href="#">Separated link</a></li>
+											</ul>
+										</li>
+									</ul>
+								</div><!--sort-price-->
+								</div>
+								<div class="col-md-9">
+								<div class="row">
+									<div class="col-md-9 boxes-col">
+										<div class="row main-row">
+											<div class="container-fluid">
+												<div class="col-md-5 hotel-img-col">
+													<div class="hotel-img">
+														<img src="images/sofa.png" alt="images">
+														<div class="gradient-divison"></div>
+														<div class="admin-avtar">
+															<img src="images/girlz.png" alt="images">
+														</div>
+														<div class="admin-text">by Admin</div>
+														<div class="admin-heart"><i class="fa fa-heart"></i></div>
+													</div>
+												</div>
+												<div class="col-md-7 hotel-description-col">
+													<div class="hotels-description-section">
+														<div class="hotel-heading">
+															Hotel Hilton and Resorts
+														</div>
+														<div class="hotel-address">
+															<i class="fa fa-map-marker"></i> JL pura telaga waja, petitenget, bali, indonesia
+														</div>
+														<div class="property-table">
+															<table class="table table-responsive table-property">
+																<tr>
+																	<td class="property-type">
+																		property type
+																	</td>
+																	<td class="property-type">
+																		accomodate
+																	</td>
+																	<td class="property-type">
+																		bedrooms
+																	</td>
+																</tr>
+																<tr>
+																	<td class="light-green villa">
+																		villa 
+																	</td>
+																	<td class="light-green villa">
+																		4 guest
+																	</td>
+																	<td class="light-green villa">
+																		4
+																	</td>
+																</tr>
+															</table>
+														</div>
+														<div class="nunc-text">
+															Nunc cursus libero purus ac congue ar lorem cursus ut sed vitae pulvinar massa idend porta nequetiam elerisque mi id, consectetur adipi deese cing elit maus fringilla 
+														</div>
+													</div>
+													<div class="hotel-address-map">
+														<div class="adress-map">
+															<iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="100%" height="210px" src="https://maps.google.com/maps?hl=en&q=bali mandara&ie=UTF8&t=m&z=13&iwloc=B&output=embed">
+																<div>
+																	<small>
+																		<a href="http://embedgooglemaps.com">embed google map</a>
+																	</small>
+																</div>
+																<div>
+																	<small>
+																		<a href="http://googlemapsgenerator.com">googlemapsgenerator.com</a>
+																	</small>
+																</div>
+																<div>
+																	<small>
+																		<a href="http://embedgooglemaps.com">embed google map</a>
+																	</small>
+																</div>
+																<div>
+																	<small>
+																		<a href="http://googlemapsgenerator.com">googlemapsgenerator.com</a>
+																	</small>
+																</div>
+																<div>
+																	<small>
+																		<a href="http://embedgooglemaps.com">embed google map</a>
+																	</small>
+																</div>
+																<div>
+																	<small>
+																		<a href="https://googlemapsgenerator.com">embed google maps</a>
+																	</small>
+																</div>
+															</iframe>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-3 right-side-col">
+										<div class="dollar-box">
+											<div class="dollar-text">
+												<sup>$</sup> 75
+												<div class="per-night">per night</div>
+											</div>
+											<div class="book-now">
+												<a href="#" class="btn book-now-btn">book now</a>
+											</div>
+										</div>
+										<div class="rating-box">
+											<div class="stars">
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star"></i> 
+												<i class="fa fa-star"></i>       
+											</div>
+											<div class="rating">
+												<span class="five">5</span> average rating
+											</div>
+											<div class="based-on">
+												Based on 211 Reviews
+											</div>
+										</div>
+									</div>
+									<div class="col-md-9 boxes-col">
+										<div class="row main-row">
+											<div class="container-fluid">
+												<div class="col-md-5 hotel-img-col">
+													<div class="hotel-img">
+														<img src="images/sofa.png" alt="images">
+														<div class="gradient-divison"></div>
+														<div class="admin-avtar">
+															<img src="images/girlz.png" alt="images">
+														</div>
+														<div class="admin-text">by Admin</div>
+														<div class="admin-heart"><i class="fa fa-heart"></i></div>
+													</div>
+												</div>
+												<div class="col-md-7 hotel-description-col">
+													<div class="hotels-description-section">
+														<div class="hotel-heading">
+															Hotel Hilton and Resorts
+														</div>
+														<div class="hotel-address">
+															<i class="fa fa-map-marker"></i> JL pura telaga waja, petitenget, bali, indonesia
+														</div>
+														<div class="property-table">
+															<table class="table table-responsive table-property">
+																<tr>
+																	<td class="property-type">
+																		property type
+																	</td>
+																	<td class="property-type">
+																		accomodate
+																	</td>
+																	<td class="property-type">
+																		bedrooms
+																	</td>
+																</tr>
+																<tr>
+																	<td class="light-green villa">
+																		villa 
+																	</td>
+																	<td class="light-green villa">
+																		4 guest
+																	</td>
+																	<td class="light-green villa">
+																		4
+																	</td>
+																</tr>
+															</table>
+														</div>
+														<div class="nunc-text">
+															Nunc cursus libero purus ac congue ar lorem cursus ut sed vitae pulvinar massa idend porta nequetiam elerisque mi id, consectetur adipi deese cing elit maus fringilla 
+														</div>
+													</div>
+													<div class="hotel-address-map">
+														<div class="adress-map">
+															<iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="100%" height="210px" src="https://maps.google.com/maps?hl=en&q=bali mandara&ie=UTF8&t=m&z=13&iwloc=B&output=embed">
+																<div>
+																	<small>
+																		<a href="http://embedgooglemaps.com">embed google map</a>
+																	</small>
+																</div>
+																<div>
+																	<small>
+																		<a href="http://googlemapsgenerator.com">googlemapsgenerator.com</a>
+																	</small>
+																</div>
+																<div>
+																	<small>
+																		<a href="http://embedgooglemaps.com">embed google map</a>
+																	</small>
+																</div>
+																<div>
+																	<small>
+																		<a href="http://googlemapsgenerator.com">googlemapsgenerator.com</a>
+																	</small>
+																</div>
+																<div>
+																	<small>
+																		<a href="http://embedgooglemaps.com">embed google map</a>
+																	</small>
+																</div>
+																<div>
+																	<small>
+																		<a href="https://googlemapsgenerator.com">embed google maps</a>
+																	</small>
+																</div>
+															</iframe>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-3 right-side-col">
+										<div class="dollar-box">
+											<div class="dollar-text">
+												<sup>$</sup> 75
+												<div class="per-night">per night</div>
+											</div>
+											<div class="book-now">
+												<a href="#" class="btn book-now-btn">book now</a>
+											</div>
+										</div>
+										<div class="rating-box">
+											<div class="stars">
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star"></i> 
+												<i class="fa fa-star"></i>       
+											</div>
+											<div class="rating">
+												<span class="five">5</span> average rating
+											</div>
+											<div class="based-on">
+												Based on 211 Reviews
+											</div>
+										</div>
+									</div>
+									<div class="col-md-9 boxes-col">
+										<div class="row main-row">
+											<div class="container-fluid">
+												<div class="col-md-5 hotel-img-col">
+													<div class="hotel-img">
+														<img src="images/sofa.png" alt="images">
+														<div class="gradient-divison"></div>
+														<div class="admin-avtar">
+															<img src="images/girlz.png" alt="images">
+														</div>
+														<div class="admin-text">by Admin</div>
+														<div class="admin-heart"><i class="fa fa-heart"></i></div>
+													</div>
+												</div>
+												<div class="col-md-7 hotel-description-col">
+													<div class="hotels-description-section">
+														<div class="hotel-heading">
+															Hotel Hilton and Resorts
+														</div>
+														<div class="hotel-address">
+															<i class="fa fa-map-marker"></i> JL pura telaga waja, petitenget, bali, indonesia
+														</div>
+														<div class="property-table">
+															<table class="table table-responsive table-property">
+																<tr>
+																	<td class="property-type">
+																		property type
+																	</td>
+																	<td class="property-type">
+																		accomodate
+																	</td>
+																	<td class="property-type">
+																		bedrooms
+																	</td>
+																</tr>
+																<tr>
+																	<td class="light-green villa">
+																		villa 
+																	</td>
+																	<td class="light-green villa">
+																		4 guest
+																	</td>
+																	<td class="light-green villa">
+																		4
+																	</td>
+																</tr>
+															</table>
+														</div>
+														<div class="nunc-text">
+															Nunc cursus libero purus ac congue ar lorem cursus ut sed vitae pulvinar massa idend porta nequetiam elerisque mi id, consectetur adipi deese cing elit maus fringilla 
+														</div>
+													</div>
+													<div class="hotel-address-map">
+														<div class="adress-map">
+															<iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="100%" height="210px" src="https://maps.google.com/maps?hl=en&q=bali mandara&ie=UTF8&t=m&z=13&iwloc=B&output=embed">
+																<div>
+																	<small>
+																		<a href="http://embedgooglemaps.com">embed google map</a>
+																	</small>
+																</div>
+																<div>
+																	<small>
+																		<a href="http://googlemapsgenerator.com">googlemapsgenerator.com</a>
+																	</small>
+																</div>
+																<div>
+																	<small>
+																		<a href="http://embedgooglemaps.com">embed google map</a>
+																	</small>
+																</div>
+																<div>
+																	<small>
+																		<a href="http://googlemapsgenerator.com">googlemapsgenerator.com</a>
+																	</small>
+																</div>
+																<div>
+																	<small>
+																		<a href="http://embedgooglemaps.com">embed google map</a>
+																	</small>
+																</div>
+																<div>
+																	<small>
+																		<a href="https://googlemapsgenerator.com">embed google maps</a>
+																	</small>
+																</div>
+															</iframe>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-3 right-side-col">
+										<div class="dollar-box">
+											<div class="dollar-text">
+												<sup>$</sup> 75
+												<div class="per-night">per night</div>
+											</div>
+											<div class="book-now">
+												<a href="#" class="btn book-now-btn">book now</a>
+											</div>
+										</div>
+										<div class="rating-box">
+											<div class="stars">
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star"></i> 
+												<i class="fa fa-star"></i>       
+											</div>
+											<div class="rating">
+												<span class="five">5</span> average rating
+											</div>
+											<div class="based-on">
+												Based on 211 Reviews
+											</div>
+										</div>
+									</div>
+									<div class="col-md-9 boxes-col">
+										<div class="row main-row">
+											<div class="container-fluid">
+												<div class="col-md-5 hotel-img-col">
+													<div class="hotel-img">
+														<img src="images/sofa.png" alt="images">
+														<div class="gradient-divison"></div>
+														<div class="admin-avtar">
+															<img src="images/girlz.png" alt="images">
+														</div>
+														<div class="admin-text">by Admin</div>
+														<div class="admin-heart"><i class="fa fa-heart"></i></div>
+													</div>
+												</div>
+												<div class="col-md-7 hotel-description-col">
+													<div class="hotels-description-section">
+														<div class="hotel-heading">
+															Hotel Hilton and Resorts
+														</div>
+														<div class="hotel-address">
+															<i class="fa fa-map-marker"></i> JL pura telaga waja, petitenget, bali, indonesia
+														</div>
+														<div class="property-table">
+															<table class="table table-responsive table-property">
+																<tr>
+																	<td class="property-type">
+																		property type
+																	</td>
+																	<td class="property-type">
+																		accomodate
+																	</td>
+																	<td class="property-type">
+																		bedrooms
+																	</td>
+																</tr>
+																<tr>
+																	<td class="light-green villa">
+																		villa 
+																	</td>
+																	<td class="light-green villa">
+																		4 guest
+																	</td>
+																	<td class="light-green villa">
+																		4
+																	</td>
+																</tr>
+															</table>
+														</div>
+														<div class="nunc-text">
+															Nunc cursus libero purus ac congue ar lorem cursus ut sed vitae pulvinar massa idend porta nequetiam elerisque mi id, consectetur adipi deese cing elit maus fringilla 
+														</div>
+													</div>
+													<div class="hotel-address-map">
+														<div class="adress-map">
+															<iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="100%" height="210px" src="https://maps.google.com/maps?hl=en&q=bali mandara&ie=UTF8&t=m&z=13&iwloc=B&output=embed">
+																<div>
+																	<small>
+																		<a href="http://embedgooglemaps.com">embed google map</a>
+																	</small>
+																</div>
+																<div>
+																	<small>
+																		<a href="http://googlemapsgenerator.com">googlemapsgenerator.com</a>
+																	</small>
+																</div>
+																<div>
+																	<small>
+																		<a href="http://embedgooglemaps.com">embed google map</a>
+																	</small>
+																</div>
+																<div>
+																	<small>
+																		<a href="http://googlemapsgenerator.com">googlemapsgenerator.com</a>
+																	</small>
+																</div>
+																<div>
+																	<small>
+																		<a href="http://embedgooglemaps.com">embed google map</a>
+																	</small>
+																</div>
+																<div>
+																	<small>
+																		<a href="https://googlemapsgenerator.com">embed google maps</a>
+																	</small>
+																</div>
+															</iframe>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-3 right-side-col">
+										<div class="dollar-box">
+											<div class="dollar-text">
+												<sup>$</sup> 75
+												<div class="per-night">per night</div>
+											</div>
+											<div class="book-now">
+												<a href="#" class="btn book-now-btn">book now</a>
+											</div>
+										</div>
+										<div class="rating-box">
+											<div class="stars">
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star"></i> 
+												<i class="fa fa-star"></i>       
+											</div>
+											<div class="rating">
+												<span class="five">5</span> average rating
+											</div>
+											<div class="based-on">
+												Based on 211 Reviews
+											</div>
+										</div>
+									</div>
+									<div class="col-md-9 boxes-col">
+										<div class="row main-row">
+											<div class="container-fluid">
+												<div class="col-md-5 hotel-img-col">
+													<div class="hotel-img">
+														<img src="images/sofa.png" alt="images">
+														<div class="gradient-divison"></div>
+														<div class="admin-avtar">
+															<img src="images/girlz.png" alt="images">
+														</div>
+														<div class="admin-text">by Admin</div>
+														<div class="admin-heart"><i class="fa fa-heart"></i></div>
+													</div>
+												</div>
+												<div class="col-md-7 hotel-description-col">
+													<div class="hotels-description-section">
+														<div class="hotel-heading">
+															Hotel Hilton and Resorts
+														</div>
+														<div class="hotel-address">
+															<i class="fa fa-map-marker"></i> JL pura telaga waja, petitenget, bali, indonesia
+														</div>
+														<div class="property-table">
+															<table class="table table-responsive table-property">
+																<tr>
+																	<td class="property-type">
+																		property type
+																	</td>
+																	<td class="property-type">
+																		accomodate
+																	</td>
+																	<td class="property-type">
+																		bedrooms
+																	</td>
+																</tr>
+																<tr>
+																	<td class="light-green villa">
+																		villa 
+																	</td>
+																	<td class="light-green villa">
+																		4 guest
+																	</td>
+																	<td class="light-green villa">
+																		4
+																	</td>
+																</tr>
+															</table>
+														</div>
+														<div class="nunc-text">
+															Nunc cursus libero purus ac congue ar lorem cursus ut sed vitae pulvinar massa idend porta nequetiam elerisque mi id, consectetur adipi deese cing elit maus fringilla 
+														</div>
+													</div>
+													<div class="hotel-address-map">
+														<div class="adress-map">
+															<iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="100%" height="210px" src="https://maps.google.com/maps?hl=en&q=bali mandara&ie=UTF8&t=m&z=13&iwloc=B&output=embed">
+																<div>
+																	<small>
+																		<a href="http://embedgooglemaps.com">embed google map</a>
+																	</small>
+																</div>
+																<div>
+																	<small>
+																		<a href="http://googlemapsgenerator.com">googlemapsgenerator.com</a>
+																	</small>
+																</div>
+																<div>
+																	<small>
+																		<a href="http://embedgooglemaps.com">embed google map</a>
+																	</small>
+																</div>
+																<div>
+																	<small>
+																		<a href="http://googlemapsgenerator.com">googlemapsgenerator.com</a>
+																	</small>
+																</div>
+																<div>
+																	<small>
+																		<a href="http://embedgooglemaps.com">embed google map</a>
+																	</small>
+																</div>
+																<div>
+																	<small>
+																		<a href="https://googlemapsgenerator.com">embed google maps</a>
+																	</small>
+																</div>
+															</iframe>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-3 right-side-col">
+										<div class="dollar-box">
+											<div class="dollar-text">
+												<sup>$</sup> 75
+												<div class="per-night">per night</div>
+											</div>
+											<div class="book-now">
+												<a href="#" class="btn book-now-btn">book now</a>
+											</div>
+										</div>
+										<div class="rating-box">
+											<div class="stars">
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star"></i> 
+												<i class="fa fa-star"></i>       
+											</div>
+											<div class="rating">
+												<span class="five">5</span> average rating
+											</div>
+											<div class="based-on">
+												Based on 211 Reviews
+											</div>
+										</div>
+									</div>
+									<div class="col-md-9 boxes-col">
+										<div class="row main-row">
+											<div class="container-fluid">
+												<div class="col-md-5 hotel-img-col">
+													<div class="hotel-img">
+														<img src="images/sofa.png" alt="images">
+														<div class="gradient-divison"></div>
+														<div class="admin-avtar">
+															<img src="images/girlz.png" alt="images">
+														</div>
+														<div class="admin-text">by Admin</div>
+														<div class="admin-heart"><i class="fa fa-heart"></i></div>
+													</div>
+												</div>
+												<div class="col-md-7 hotel-description-col">
+													<div class="hotels-description-section">
+														<div class="hotel-heading">
+															Hotel Hilton and Resorts
+														</div>
+														<div class="hotel-address">
+															<i class="fa fa-map-marker"></i> JL pura telaga waja, petitenget, bali, indonesia
+														</div>
+														<div class="property-table">
+															<table class="table table-responsive table-property">
+																<tr>
+																	<td class="property-type">
+																		property type
+																	</td>
+																	<td class="property-type">
+																		accomodate
+																	</td>
+																	<td class="property-type">
+																		bedrooms
+																	</td>
+																</tr>
+																<tr>
+																	<td class="light-green villa">
+																		villa 
+																	</td>
+																	<td class="light-green villa">
+																		4 guest
+																	</td>
+																	<td class="light-green villa">
+																		4
+																	</td>
+																</tr>
+															</table>
+														</div>
+														<div class="nunc-text">
+															Nunc cursus libero purus ac congue ar lorem cursus ut sed vitae pulvinar massa idend porta nequetiam elerisque mi id, consectetur adipi deese cing elit maus fringilla 
+														</div>
+													</div>
+													<div class="hotel-address-map">
+														<div class="adress-map">
+															<iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="100%" height="210px" src="https://maps.google.com/maps?hl=en&q=bali mandara&ie=UTF8&t=m&z=13&iwloc=B&output=embed">
+																<div>
+																	<small>
+																		<a href="http://embedgooglemaps.com">embed google map</a>
+																	</small>
+																</div>
+																<div>
+																	<small>
+																		<a href="http://googlemapsgenerator.com">googlemapsgenerator.com</a>
+																	</small>
+																</div>
+																<div>
+																	<small>
+																		<a href="http://embedgooglemaps.com">embed google map</a>
+																	</small>
+																</div>
+																<div>
+																	<small>
+																		<a href="http://googlemapsgenerator.com">googlemapsgenerator.com</a>
+																	</small>
+																</div>
+																<div>
+																	<small>
+																		<a href="http://embedgooglemaps.com">embed google map</a>
+																	</small>
+																</div>
+																<div>
+																	<small>
+																		<a href="https://googlemapsgenerator.com">embed google maps</a>
+																	</small>
+																</div>
+															</iframe>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-3 right-side-col">
+										<div class="dollar-box">
+											<div class="dollar-text">
+												<sup>$</sup> 75
+												<div class="per-night">per night</div>
+											</div>
+											<div class="book-now">
+												<a href="#" class="btn book-now-btn">book now</a>
+											</div>
+										</div>
+										<div class="rating-box">
+											<div class="stars">
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star"></i> 
+												<i class="fa fa-star"></i>       
+											</div>
+											<div class="rating">
+												<span class="five">5</span> average rating
+											</div>
+											<div class="based-on">
+												Based on 211 Reviews
+											</div>
+										</div>
+									</div>
+									<div class="col-md-9 boxes-col">
+										<div class="row main-row">
+											<div class="container-fluid">
+												<div class="col-md-5 hotel-img-col">
+													<div class="hotel-img">
+														<img src="images/sofa.png" alt="images">
+														<div class="gradient-divison"></div>
+														<div class="admin-avtar">
+															<img src="images/girlz.png" alt="images">
+														</div>
+														<div class="admin-text">by Admin</div>
+														<div class="admin-heart white-heart"><i class="fa fa-heart"></i></div>
+													</div>
+												</div>
+												<div class="col-md-7 hotel-description-col">
+													<div class="hotels-description-section">
+														<div class="hotel-heading">
+															Hotel Hilton and Resorts
+														</div>
+														<div class="hotel-address">
+															<i class="fa fa-map-marker"></i> JL pura telaga waja, petitenget, bali, indonesia
+														</div>
+														<div class="property-table">
+															<table class="table table-responsive table-property">
+																<tr>
+																	<td class="property-type">
+																		property type
+																	</td>
+																	<td class="property-type">
+																		accomodate
+																	</td>
+																	<td class="property-type">
+																		bedrooms
+																	</td>
+																</tr>
+																<tr>
+																	<td class="light-green villa">
+																		villa 
+																	</td>
+																	<td class="light-green villa">
+																		4 guest
+																	</td>
+																	<td class="light-green villa">
+																		4
+																	</td>
+																</tr>
+															</table>
+														</div>
+														<div class="nunc-text">
+															Nunc cursus libero purus ac congue ar lorem cursus ut sed vitae pulvinar massa idend porta nequetiam elerisque mi id, consectetur adipi deese cing elit maus fringilla 
+														</div>
+													</div>
+													<div class="hotel-address-map">
+														<div class="adress-map">
+															<iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="100%" height="210px" src="https://maps.google.com/maps?hl=en&q=bali mandara&ie=UTF8&t=m&z=13&iwloc=B&output=embed">
+																<div>
+																	<small>
+																		<a href="http://embedgooglemaps.com">embed google map</a>
+																	</small>
+																</div>
+																<div>
+																	<small>
+																		<a href="http://googlemapsgenerator.com">googlemapsgenerator.com</a>
+																	</small>
+																</div>
+																<div>
+																	<small>
+																		<a href="http://embedgooglemaps.com">embed google map</a>
+																	</small>
+																</div>
+																<div>
+																	<small>
+																		<a href="http://googlemapsgenerator.com">googlemapsgenerator.com</a>
+																	</small>
+																</div>
+																<div>
+																	<small>
+																		<a href="http://embedgooglemaps.com">embed google map</a>
+																	</small>
+																</div>
+																<div>
+																	<small>
+																		<a href="https://googlemapsgenerator.com">embed google maps</a>
+																	</small>
+																</div>
+															</iframe>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-3 right-side-col">
+										<div class="dollar-box">
+											<div class="dollar-text">
+												<sup>$</sup> 75
+												<div class="per-night">per night</div>
+											</div>
+											<div class="book-now">
+												<a href="#" class="btn book-now-btn">book now</a>
+											</div>
+										</div>
+										<div class="rating-box">
+											<div class="stars">
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star"></i> 
+												<i class="fa fa-star"></i>       
+											</div>
+											<div class="rating">
+												<span class="five">5</span> average rating
+											</div>
+											<div class="based-on">
+												Based on 211 Reviews
+											</div>
+										</div>
+									</div>
+									<div class="col-md-9 boxes-col">
+										<div class="row main-row">
+											<div class="container-fluid">
+												<div class="col-md-5 hotel-img-col">
+													<div class="hotel-img">
+														<img src="images/sofa.png" alt="images">
+														<div class="gradient-divison"></div>
+														<div class="admin-avtar">
+															<img src="images/girlz.png" alt="images">
+														</div>
+														<div class="admin-text">by Admin</div>
+														<div class="admin-heart white-heart"><i class="fa fa-heart"></i></div>
+													</div>
+												</div>
+												<div class="col-md-7 hotel-description-col">
+													<div class="hotels-description-section">
+														<div class="hotel-heading">
+															Hotel Hilton and Resorts
+														</div>
+														<div class="hotel-address">
+															<i class="fa fa-map-marker"></i> JL pura telaga waja, petitenget, bali, indonesia
+														</div>
+														<div class="property-table">
+															<table class="table table-responsive table-property">
+																<tr>
+																	<td class="property-type">
+																		property type
+																	</td>
+																	<td class="property-type">
+																		accomodate
+																	</td>
+																	<td class="property-type">
+																		bedrooms
+																	</td>
+																</tr>
+																<tr>
+																	<td class="light-green villa">
+																		villa 
+																	</td>
+																	<td class="light-green villa">
+																		4 guest
+																	</td>
+																	<td class="light-green villa">
+																		4
+																	</td>
+																</tr>
+															</table>
+														</div>
+														<div class="nunc-text">
+															Nunc cursus libero purus ac congue ar lorem cursus ut sed vitae pulvinar massa idend porta nequetiam elerisque mi id, consectetur adipi deese cing elit maus fringilla 
+														</div>
+													</div>
+													<div class="hotel-address-map">
+														<div class="adress-map">
+															<iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="100%" height="210px" src="https://maps.google.com/maps?hl=en&q=bali mandara&ie=UTF8&t=m&z=13&iwloc=B&output=embed">
+																<div>
+																	<small>
+																		<a href="http://embedgooglemaps.com">embed google map</a>
+																	</small>
+																</div>
+																<div>
+																	<small>
+																		<a href="http://googlemapsgenerator.com">googlemapsgenerator.com</a>
+																	</small>
+																</div>
+																<div>
+																	<small>
+																		<a href="http://embedgooglemaps.com">embed google map</a>
+																	</small>
+																</div>
+																<div>
+																	<small>
+																		<a href="http://googlemapsgenerator.com">googlemapsgenerator.com</a>
+																	</small>
+																</div>
+																<div>
+																	<small>
+																		<a href="http://embedgooglemaps.com">embed google map</a>
+																	</small>
+																</div>
+																<div>
+																	<small>
+																		<a href="https://googlemapsgenerator.com">embed google maps</a>
+																	</small>
+																</div>
+															</iframe>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-3 right-side-col">
+										<div class="dollar-box">
+											<div class="dollar-text">
+												<sup>$</sup> 75
+												<div class="per-night">per night</div>
+											</div>
+											<div class="book-now">
+												<a href="#" class="btn book-now-btn">book now</a>
+											</div>
+										</div>
+										<div class="rating-box">
+											<div class="stars">
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star"></i> 
+												<i class="fa fa-star"></i>       
+											</div>
+											<div class="rating">
+												<span class="five">5</span> average rating
+											</div>
+											<div class="based-on">
+												Based on 211 Reviews
+											</div>
+										</div>
+									</div>
+									<div class="col-md-9 boxes-col">
+										<div class="row main-row">
+											<div class="container-fluid">
+												<div class="col-md-5 hotel-img-col">
+													<div class="hotel-img">
+														<img src="images/sofa.png" alt="images">
+														<div class="gradient-divison"></div>
+														<div class="admin-avtar">
+															<img src="images/girlz.png" alt="images">
+														</div>
+														<div class="admin-text">by Admin</div>
+														<div class="admin-heart white-heart"><i class="fa fa-heart"></i></div>
+													</div>
+												</div>
+												<div class="col-md-7 hotel-description-col">
+													<div class="hotels-description-section">
+														<div class="hotel-heading">
+															Hotel Hilton and Resorts
+														</div>
+														<div class="hotel-address">
+															<i class="fa fa-map-marker"></i> JL pura telaga waja, petitenget, bali, indonesia
+														</div>
+														<div class="property-table">
+															<table class="table table-responsive table-property">
+																<tr>
+																	<td class="property-type">
+																		property type
+																	</td>
+																	<td class="property-type">
+																		accomodate
+																	</td>
+																	<td class="property-type">
+																		bedrooms
+																	</td>
+																</tr>
+																<tr>
+																	<td class="light-green villa">
+																		villa 
+																	</td>
+																	<td class="light-green villa">
+																		4 guest
+																	</td>
+																	<td class="light-green villa">
+																		4
+																	</td>
+																</tr>
+															</table>
+														</div>
+														<div class="nunc-text">
+															Nunc cursus libero purus ac congue ar lorem cursus ut sed vitae pulvinar massa idend porta nequetiam elerisque mi id, consectetur adipi deese cing elit maus fringilla 
+														</div>
+													</div>
+													<div class="hotel-address-map">
+														<div class="adress-map">
+															<iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="100%" height="210px" src="https://maps.google.com/maps?hl=en&q=bali mandara&ie=UTF8&t=m&z=13&iwloc=B&output=embed">
+																<div>
+																	<small>
+																		<a href="http://embedgooglemaps.com">embed google map</a>
+																	</small>
+																</div>
+																<div>
+																	<small>
+																		<a href="http://googlemapsgenerator.com">googlemapsgenerator.com</a>
+																	</small>
+																</div>
+																<div>
+																	<small>
+																		<a href="http://embedgooglemaps.com">embed google map</a>
+																	</small>
+																</div>
+																<div>
+																	<small>
+																		<a href="http://googlemapsgenerator.com">googlemapsgenerator.com</a>
+																	</small>
+																</div>
+																<div>
+																	<small>
+																		<a href="http://embedgooglemaps.com">embed google map</a>
+																	</small>
+																</div>
+																<div>
+																	<small>
+																		<a href="https://googlemapsgenerator.com">embed google maps</a>
+																	</small>
+																</div>
+															</iframe>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-3 right-side-col">
+										<div class="dollar-box">
+											<div class="dollar-text">
+												<sup>$</sup> 75
+												<div class="per-night">per night</div>
+											</div>
+											<div class="book-now">
+												<a href="#" class="btn book-now-btn">book now</a>
+											</div>
+										</div>
+										<div class="rating-box">
+											<div class="stars">
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star"></i> 
+												<i class="fa fa-star"></i>       
+											</div>
+											<div class="rating">
+												<span class="five">5</span> average rating
+											</div>
+											<div class="based-on">
+												Based on 211 Reviews
+											</div>
+										</div>
+									</div>
+									<div class="col-md-9 boxes-col">
+										<div class="row main-row">
+											<div class="container-fluid">
+												<div class="col-md-5 hotel-img-col">
+													<div class="hotel-img">
+														<img src="images/sofa.png" alt="images">
+														<div class="gradient-divison"></div>
+														<div class="admin-avtar">
+															<img src="images/girlz.png" alt="images">
+														</div>
+														<div class="admin-text">by Admin</div>
+														<div class="admin-heart white-heart"><i class="fa fa-heart"></i></div>
+													</div>
+												</div>
+												<div class="col-md-7 hotel-description-col">
+													<div class="hotels-description-section">
+														<div class="hotel-heading">
+															Hotel Hilton and Resorts
+														</div>
+														<div class="hotel-address">
+															<i class="fa fa-map-marker"></i> JL pura telaga waja, petitenget, bali, indonesia
+														</div>
+														<div class="property-table">
+															<table class="table table-responsive table-property">
+																<tr>
+																	<td class="property-type">
+																		property type
+																	</td>
+																	<td class="property-type">
+																		accomodate
+																	</td>
+																	<td class="property-type">
+																		bedrooms
+																	</td>
+																</tr>
+																<tr>
+																	<td class="light-green villa">
+																		villa 
+																	</td>
+																	<td class="light-green villa">
+																		4 guest
+																	</td>
+																	<td class="light-green villa">
+																		4
+																	</td>
+																</tr>
+															</table>
+														</div>
+														<div class="nunc-text">
+															Nunc cursus libero purus ac congue ar lorem cursus ut sed vitae pulvinar massa idend porta nequetiam elerisque mi id, consectetur adipi deese cing elit maus fringilla 
+														</div>
+													</div>
+													<div class="hotel-address-map">
+														<div class="adress-map">
+															<iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="100%" height="210px" src="https://maps.google.com/maps?hl=en&q=bali mandara&ie=UTF8&t=m&z=13&iwloc=B&output=embed">
+																<div>
+																	<small>
+																		<a href="http://embedgooglemaps.com">embed google map</a>
+																	</small>
+																</div>
+																<div>
+																	<small>
+																		<a href="http://googlemapsgenerator.com">googlemapsgenerator.com</a>
+																	</small>
+																</div>
+																<div>
+																	<small>
+																		<a href="http://embedgooglemaps.com">embed google map</a>
+																	</small>
+																</div>
+																<div>
+																	<small>
+																		<a href="http://googlemapsgenerator.com">googlemapsgenerator.com</a>
+																	</small>
+																</div>
+																<div>
+																	<small>
+																		<a href="http://embedgooglemaps.com">embed google map</a>
+																	</small>
+																</div>
+																<div>
+																	<small>
+																		<a href="https://googlemapsgenerator.com">embed google maps</a>
+																	</small>
+																</div>
+															</iframe>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-3 right-side-col">
+										<div class="dollar-box">
+											<div class="dollar-text">
+												<sup>$</sup> 75
+												<div class="per-night">per night</div>
+											</div>
+											<div class="book-now">
+												<a href="#" class="btn book-now-btn">book now</a>
+											</div>
+										</div>
+										<div class="rating-box">
+											<div class="stars">
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star"></i>
+												<i class="fa fa-star"></i> 
+												<i class="fa fa-star"></i>       
+											</div>
+											<div class="rating">
+												<span class="five">5</span> average rating
+											</div>
+											<div class="based-on">
+												Based on 211 Reviews
+											</div>
+										</div>
+									</div>	
+								</div><!--row-->
+								<div class="placely-page-nation">
+									<div class="list-rooms">
+										1-18 of 220 Rooms
+									</div>
+									<ul class="pagination">
+										<li><a href="#">1</a></li>
+										<li><a href="#">2</a></li>
+										<li><a href="#">3</a></li>
+										<li class="dot1"><a href="#">...</a></li>
+										<li class="dot2"><a href="#">10</a></li>
+										<li class="dot3"><a href="#"><i class="fa fa-caret-right"></i></a></li>
+									</ul>
+								</div>
+								</div><!--col-md-9-->
+							</div><!--col-md-9-->
+						</div><!--row-->
+					</div><!--container-->
+				</div><!--placely-resorts-->
+				<div class="Travel-discount">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-5">
+								<div class="travel-compensation">
+									<div class="travel-deals">Travel Deals - up to 50% off</div>
+									<div class="travel-signup">Sign up and get exclusive travel deals stright to your inbox!</div>
+								</div>
+							</div>
+							<div class="col-md-7">
+								<div class="input-group">
+									<input type="text" class="form-control" placeholder="">
+									<span class="input-group-btn">
+										<button class="btn btn-signup" type="button">sign up</button>
+									</span>
+								</div><!-- /input-group -->
+							</div>
+						</div>
+					</div>
+				</div><!--travel-discount-->
+				<div class="footer">
+					<div class="container">
+						<div class="row">	
+							<div class="col-md-3">
+								<div class="about">about us</div>
+								<div class="placely"><i class="fa fa-paper-plane"></i>placely</div>
+								<div class="about-text"><p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.</p></div>
+								<ul class="list-inline list-unstyled">
+									<li><a href="#"><img src="images/amex.jpg" alt=""></a></li>
+									<li><a href="#"><img src="images/discover.jpg" alt=""></a></li>
+									<li><a href="#"><img src="images/visa.jpg" alt=""></a></li>
+									<li><a href="#"><img src="images/mc.jpg" alt=""></a></li>
+									<li><a href="#"><img src="images/flat.jpg" alt=""></a></li>
+								</ul>
+							</div>
+							<div class="col-md-3">
+								<div class="placely-info">
+									Resource Links
+								</div>
+								<ul class="list-unstyled placely-info-link">
+									<li><a href="#">About us</a></li>
+									<li><a href="#">Customer support</a></li>
+									<li><a href="#">contact us</a></li>
+									<li><a href="#">Redeem invite code</a></li>
+									<li><a href="#">carrers</a></li>
+									<li><a href="#">Logos & images</a></li>
+									<li><a href="#">Terms and conditions</a></li>
+								</ul>
+							</div><!--col-md-3-->
+							<div class="col-md-3">
+								<div class="placely-info">
+									Resource Links
+								</div>
+								<div class="world-map">
+									<img src="images/world-map.png" alt="">
+								</div>
+								<ul class="list-unstyled placely-info-link">
+									<li><a href="#">Amsterdam Hostels</a></li>
+									<li><a href="#">Berlin Hostels</a></li>
+									<li><a href="#">Dublin Hostels</a></li>
+									<li><a href="#">Florence Hostels</a></li>
+									<li><a href="#">Los Angeles Hostels</a></li>
+									<li><a href="#">Melbourne Hostels</a></li>
+									<li><a href="#">Munich Hostels</a></li>
+								</ul>
+							</div><!--col-md-3-->
+							<div class="col-md-3">
+								<div class="connect">Connect with us</div>
+								<ul class="list-unstyled connect-social">
+									<li><a href="#" class="fb-icon"><i class="fa fa-facebook"></i>facebook</a></li>
+									<li><a href="#" class="twitter-icon"><i class="fa fa-twitter"></i>twitter</a></li>
+									<li><a href="#" class="google-icon"><i class="fa fa-google-plus"></i>google</a></li>
+									<li><a href="#" class="flickar-icon"><i class="fa fa-flickr"></i>flickar</a></li>
+									<li><a href="#" class="youtube-icon"><i class="fa fa-youtube"></i>youtube</a></li>
+								</ul>
+							</div><!--col-md-3-->
+						</div>
+						<div class="copy-right">
+							<div class="container">
+								<div class="copy text-center">
+									<i class="fa fa-copyright"></i>copyright 2014 <span>Placely inc." The New Booking Room Themes "</span>
+								</div>
+							</div><!--container-->
+						</div><!--copy-right-->
+					</div><!--container-->
+				</div><!--footer-->
+				<!-- Bootstrap JavaScript -->
+				<script src="js/bootstrap.min.js"></script>
+				<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+				<!-- jQuery -->
+				<script src="js/jquery.min.js"></script>
+				<script src="js/moment.js"></script>
+				<script src="js/bootstrap.js"></script>
+				<script src="js/bootstrap-datepicker.js"></script>
+				<script src="js/bootstrap-datetimepicker.js"></script>
+				<script type="text/javascript">
+					$(function () {
+						$('#datetimepicker1').datepicker();
+						$('#datetimepicker2').datepicker();
+					});
+				</script>
+			</body>
+			</html>
